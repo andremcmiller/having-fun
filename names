@@ -1,0 +1,8 @@
+names=input()
+def four_letters(names):
+  names.split()
+  k=0
+  for i in range(len(names.split())):
+    if len(names[i]) == 4:
+      k+=1     
+four_letters(names)
