@@ -1,0 +1,15 @@
+from selenium import webdriver
+
+link = "http://quals2019.cyberschool.msu.ru:8100/"
+
+driver = webdriver.Chrome()
+driver.get(link)
+
+for i in range(100):
+        try:
+                verify = driver.find_element_by_xpath("//input[@type='hidden']")
+                send = driver.find_element_by_xpath("//input[@type='submit']")
+                driver.execute_script("arguments[0].value = '0';", verify)
+                send.click()
+                except:
+                        pass
